@@ -191,7 +191,7 @@ void solve_task() {
             }
 
             double rounded = num;  
-            double error = fabs(num - rounded);
+            double error = fabs(num - (double)rounded); 
 
             fprintf(wp, "%d.\t%.*f\t", t, arr[5], num);
 
