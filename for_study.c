@@ -56,10 +56,10 @@ void input_file_for_study(){
         scanf("%d", &k);
     }
 
-    printf("Введите разрядность вещественного числа (32, 64, 128): ");
+    printf("Введите разрядность вещественного числа (32, 64): ");
     scanf("%d", &razryd);
-    while (razryd != 32 && razryd != 64 && razryd != 128){
-        printf("Ошибка! Введите 32, 64 или 128: ");
+    while (razryd != 32 && razryd != 64){
+        printf("Ошибка! Введите 32, 64: ");
         scanf("%d", &razryd);
     }
 
@@ -208,7 +208,7 @@ void solve_task() {
             fprintf(wp, "%d.\t%.*f\t", t, arr[5], num);
 
         if (arr[2] == 32) {
-        float num32 = (float)num;  // Конвертируем в float
+        float num32 = (float)num; 
         float32ToMachinecode_file(num32, wp);
         } else if (arr[2] == 64) {
         double64ToMachinecode_file(num, wp);
